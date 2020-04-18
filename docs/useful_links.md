@@ -16,6 +16,8 @@ __Steve Brunton's Control Bootcamp. The channel covers everything from basics te
 
 https://www.youtube.com/watch?v=Pi7l8mMjYVE&list=PLMrJAkhIeNNR20Mz-VpzgfQs5zrYi085m
 
+__To stay updated:  Control Engineering Journal__
 
+https://www.controleng.com/
 
 
