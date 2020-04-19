@@ -6,8 +6,8 @@ reading_time:       true
 words_per_minute:   200
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
-#url:                
-#baseurl:          
+url:                http://cognition.uni-osnabrueck.de/CLCML/
+baseurl:            "neuroinfo-os/CLCML"
 
 # Jekyll
 permalink:          /:title/
