@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**  
 
 - [Neural Networks in Feedback Control Systems](#neural-networks-in-feedback-control-systems)
         - [Authors: F.L. Lewis and Shuzhi Sam Ge](#authors-fl-lewis-and-shuzhi-sam-ge)
@@ -27,11 +27,6 @@
       - [Approximate Dynamic Programming and Adaptive Critics](#approximate-dynamic-programming-and-adaptive-critics)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Neural Networks in Feedback Control Systems
-##### Authors: F.L. Lewis and Shuzhi Sam Ge
-##### Published: Mechanical Engineer’s Handbook, John Wiley, New York, 2005
-__________________________________________
 
 
 
