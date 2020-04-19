@@ -1,3 +1,9 @@
+
+ ## __Neural Networks in Feedback Control Systems__
+ ### Authors: F.L. Lewis and Shuzhi Sam Ge
+ ### Published: Mechanical Engineer’s Handbook, John Wiley, New York, 2005
+
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  
