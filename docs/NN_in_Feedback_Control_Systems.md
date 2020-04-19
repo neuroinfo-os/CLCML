@@ -39,14 +39,11 @@ To implement a controller algorythm on a computer it is necessary to specify it 
 ##### Multi-loop Neural Network Feedback Control Structures
 
 The class of controllers with _include additional inner feedback loops_ is required for systems with _additional dynamical complications_ or _additional performance requirements_. using Lyapunov energy-based techniques, it was shown that if each loop is bounded (state-strict passive<sup>1</sup>), then the overall multiloop NN controller provides stability, performance, and bounded NN weights (Lewis, Jagannathan, and Yesildirek,  1999).
-
+There are sevral examples of Multi-loop NN controllers provided in the article : Backstepping Neurocontroller for __Electrically Driven Robot__; __Compensation of Flexible Modes and High-Frequency Dynamics__ and __a Force Control algorithm__. 
 ________________________________________________________________
 <sup>1</sup> _a  _passive system_ is a system, which cannot store more energy, than energy supplied to the system. A _strictly passive system_ bounded further by some parameter,lower than amout of input energy.  For more information about passivity in control systems consult these papers: http://www.l2s.centralesupelec.fr/sites/l2s.centralesupelec.fr/files/users/loria/teaching/passivity-in-control-systems.pdf ,  https://www.hindawi.com/journals/mpe/2015/591854/ ._
 _______________________________________________________________
-Examples of Multi-loop Neural Network Feedback Control Structures:
-###### Backstepping Neurocontroller for Electrically Driven Robot
-###### Compensation of Flexible Modes and High-Frequency Dynamics Using NN
-###### Force Control with Neural Nets
+
 
 ##### Feedforward Control Structures for Actuator Compensation
 
