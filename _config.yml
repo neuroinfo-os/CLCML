@@ -2,27 +2,25 @@
 title: Closed-loop Control Mashine Learning
 theme: jekyll-theme-cayman
 description: On this web page you can find litreture review of topic related papers
-reading_time:       true
-words_per_minute:   200
-tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
-locale:             en_US
-url:                http://cognition.uni-osnabrueck.de/CLCML/
-baseurl:            "neuroinfo-os/CLCML"
+
+
+#url:                http://cognition.uni-osnabrueck.de/CLCML/
+#baseurl:            "neuroinfo-os/CLCML"
 
 # Jekyll
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        rouge
-kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
-sass:
-  sass_dir:         _sass
-  style:            compressed
+#permalink:          /:title/
+#markdown:           kramdown
+#highlighter:        rouge
+#kramdown:
+ # auto_ids:         true
+  #footnote_nr:      1
+  #entity_output:    as_char
+  #toc_levels:       1..6
+  #enable_coderay:   false
+#mathjax:            true
+#sass:
+ # sass_dir:         _sass
+  #style:            compressed
 
 # Comments
 #disqus_shortname:   taylantatli
@@ -60,33 +58,33 @@ github-url:         username
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-include:
+#plugins:
+ # - jekyll-relative-links
+#relative_links:
+ # enabled: true
+  #collections: true
+#include:
   - README.md
  
 
-defaults:
+#defaults:
   # _docs
-  - scope:
-      path: ""
-      type: docs
-    values:
-      sidebar:
-        nav: "docs"
+ # - scope:
+  #    path: ""
+   #   type: docs
+    #values:
+     # sidebar:
+      #  nav: "docs"
 
 # Gems
-gems:
-  - jekyll-mentions
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
+#gems:
+ # - jekyll-mentions
+  #- jekyll-feed
+  #- jekyll-sitemap
+  #- jekyll-gist
 
-jekyll-mentions:
-    base_url: https://github.com
+#jekyll-mentions:
+    #base_url: https://github.com
 
 # Exclude list
 #exclude:
