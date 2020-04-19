@@ -1,8 +1,8 @@
 # Neural Networks in Feedback Control Systems
-### Authors: F.L. Lewis and Shuzhi Sam Ge
-### Published: Mechanical Engineer’s Handbook, John Wiley, New York, 2005
-
-#### INTRODUCTION
+##### Authors: F.L. Lewis and Shuzhi Sam Ge
+##### Published: Mechanical Engineer’s Handbook, John Wiley, New York, 2005
+__________________________________________
+#### Introduction
 The aricle provides an historical overview of development of NN usage in feedback control systems and an overview of various multiloop controllers algorithms using NN.
 
 
@@ -12,11 +12,10 @@ There are two main Neural Network Control Topologies: direct and inderect. __Ind
 The challenge in using NN for feedback control is to select a adequate control system structure, and then to tune the NN weights to guarantee closed-loop stability and performance.
 
 
-#### Historical overview
 The use of neural networks (NN) in feedback control systems was first proposed by Werbos [1989]. Early works aimed to adress several challenges for closed-loop controll systems. The main are: "weight initialization for feedback stability, determining the gradients needed for backpropagation tuning, determining what to backpropagate, obviating the need for preliminary off-line tuning, modifying backprop so that it tunes the weights forward through time". Overviews of the early works regarding NN control could be found in the Handbook of Intelligent Control [White 1992]. 
 
-
-#### Covered controllers algorithms
+------------------------------------------------------------
+#### Covered controllers' algorithms
 
 ##### Feedback Linearization Design of NN Tracking Controllers
 The section dedicated to  NN feedback controllers that  makes a robotic system to follow a certain trajectory or path in conditions where nor the dynamics of the robot, nor disturbances are known.
@@ -35,18 +34,28 @@ If the first layer weights V are fixed so that one has the simplified tuning alg
 This approach implies partitioning of the controller in terms of partitioned NN or neural subnets. This simplifies the design, gives added controller structure, and allows faster weight tuning algorithms. An advantage of this structured NN is that if some terms in the robot dynamics are well-known (e.g. inertia matrix M(q) and gravity G(q)), then their NNs can be replaced by equations that explicitly compute these terms.
 
 ##### NN Control for Discrete-Time Systems
+To implement a controller algorythm on a computer it is necessary to specify it in a digital(discrete-time) form. In 1999 Lewis, Jagannathan, and Yesildirek showed that it is possible to guarantee system stability and robustness with an N-layer NN controller. Sich a controller should be composed of two parts: the gradient algorithm and robystifying descrete-time term(a.k.a. "forgetting term"). 
 
 ##### Multi-loop Neural Network Feedback Control Structures
-###### Backstepping Neurocontroller for Electrically Driven Robot.
+
+The class of controllers with _include additional inner feedback loops_ is required for systems with _additional dynamical complications_ or _additional performance requirements_. using Lyapunov energy-based techniques, it was shown that if each loop is bounded (state-strict passive<sup>1</sup>), then the overall multiloop NN controller provides stability, performance, and bounded NN weights (Lewis, Jagannathan, and Yesildirek,  1999).
+
+________________________________________________________________
+<sup>1</sup> _a  _passive system_ is a system, which cannot store more energy, than energy supplied to the system. A _strictly passive system_ bounded further by some parameter,lower than amout of input energy.  For more information about passivity in control systems consult these papers: http://www.l2s.centralesupelec.fr/sites/l2s.centralesupelec.fr/files/users/loria/teaching/passivity-in-control-systems.pdf ,  https://www.hindawi.com/journals/mpe/2015/591854/ ._
+_______________________________________________________________
+Examples of Multi-loop Neural Network Feedback Control Structures:
+###### Backstepping Neurocontroller for Electrically Driven Robot
 ###### Compensation of Flexible Modes and High-Frequency Dynamics Using NN
 ###### Force Control with Neural Nets
 
 ##### Feedforward Control Structures for Actuator Compensation
+
 ###### Feedforward Neurocontroller for Systems with Unknown Deadzone 
 ###### Dynamic Inversion Neurocontroller for Systems with Backlash.
 #### Neural Network Observers for Output-Feedback Control
 
 ##### Reinforcement Learning Control Using NN
+
 ###### Neural Network Reinforcement Learning Controller 
 ###### Adaptive Reinforcement Learning Using Fuzzy Logic Critic
 
