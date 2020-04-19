@@ -60,6 +60,23 @@ github-url:         username
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+ 
+
+defaults:
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      sidebar:
+        nav: "docs"
 
 # Gems
 gems:
