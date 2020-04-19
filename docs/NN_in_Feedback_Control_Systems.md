@@ -1,7 +1,7 @@
 
  ## __Neural Networks in Feedback Control Systems__
- ### Authors: F.L. Lewis and Shuzhi Sam Ge
- ### Published: Mechanical Engineer’s Handbook, John Wiley, New York, 2005
+ ### _Authors: F.L. Lewis and Shuzhi Sam Ge_
+ ### _Published: Mechanical Engineer’s Handbook, John Wiley, New York, 2005_
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -77,10 +77,18 @@ _______________________________________________________________
 
 
 #### Feedforward Control Structures for Actuator Compensation
+Since these actuator nonlinearities appear in the feedforward loop, the NN compensator must also appear in the feedforward loop
+
 
 ##### Feedforward Neurocontroller for Systems with Unknown Deadzone 
+__The deadzone__ is a state when the control signal takes on small values or passes through zero. ,( since only values greater than a certain threshold can influence the system.)
 ##### Dynamic Inversion Neurocontroller for Systems with Backlash.
+__Blacklash__ - situation,  when the control signal reverses in value.
+
 #### Neural Network Observers for Output-Feedback Control
+The idea of this control scheme comes from  an observer concept in control system theory.
+This type of NN controllers could be used when only not all internal system information is measurable (which is almost always a case in industry) and available for a feedback.  In this case an additional dynamic NN is used. This additional NN meant to provide estimates of the unmeasurable plant states.
+
 
 #### Reinforcement Learning Control Using NN
 
