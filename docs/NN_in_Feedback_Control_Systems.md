@@ -91,14 +91,39 @@ This type of NN controllers could be used when only not all internal system info
 
 
 #### Reinforcement Learning Control Using NN
-
+First proposed by Mendel in  1970. Since then were rigously studied and developed. Implemintation of reinforcement learning in the control system theory frame struggles with variety of difficulties due to reduced information and therefore complications in prooving it's stability. 
 ##### Neural Network Reinforcement Learning Controller 
+Initially, action generating NN takes as input the desired trajectory <img src="https://render.githubusercontent.com/render/math?math=q_d(t)"> as the user input. Then, after a plant performs an action, resulting in <img src="https://render.githubusercontent.com/render/math?math=q(t)"> the _instanteous utility_ - r(t) -  is calculated. Then the signum<sup>2</sup> function of the r(t) is taken to critique the perfomance of the system. 
+
+
+<img src="https://render.githubusercontent.com/render/math?math=R(t)=sgn(r(t))">
+<img src="https://render.githubusercontent.com/render/math?math=r=\dot{e}+\Lambda*e">, where
+<img src="https://render.githubusercontent.com/render/math?math=e=q_d-q">.
+
+
+
+Afterwards the NN weights are tuned using only R(t) with
+<img src="https://render.githubusercontent.com/render/math?math=\dot\hat{W}=F\sigma(x)R^t-kF\hat{W}"> This tuning algorithm's stability and tracking of closed-loop system is proven with  _Lyapunov energy fynction_. 
+
+____________
+<sup>2</sup>The _signum_ function is the derivative of the absolute value function (up to the indeterminacy at zero): <img src="https://render.githubusercontent.com/render/math?math=sign(x)=\frac{x}{|x|}">. At zero the function is equals zero, which is useful for reinforcment learning: zero considered as a reward, where as other values as a punishment. 
+____________________
+
+
 ##### Adaptive Reinforcement Learning Using Fuzzy Logic Critic
+This algorithm uses fuzzy logic system as a critic and a NN as an action generator, which controls the system. The critic system can be initialized via linguistic or heuristic notions by the user, and later on ine can interpret which information was stored by the system during the learning process. 
+
+The adaptive Critic unit output has the form of an input x parced to the Action generating NN. 
+<img src="https://render.githubusercontent.com/render/math?math=y=W^T\sigma(x,U)">, where W is an output values and q is a set of fuzzy logic basis functions. The basis functions are _membership functions_, and ususally represented by triangle functions. Instead of them,  splines, 2nd and 3rd degree polynomials, and the RBF functions could be used. 
+
 
 #### Optimal Control Using NN
 ##### Neural Network H-2 Control Using the Hamilton-Jacobi-Bellman Equation 
 ##### Neural Network H-Infinity Control Using the Hamilton-Jacobi-Isaacs Equation
 
-#### Approximate Dynamic Programming and Adaptive Critics
-Initially proposed by Werbos [1991]. Applications of adaptive critics in the continuous-time domain were mainly done through discretization( [Tsitsiklis 1995]). 
+#### Approximate Dynamic Programming and Adaptive Critics 
+The goal of ADP is to evaluate the optimal value and optimal control using techniques that progress forward in time. There are several techniques wich can be used:
+- Heuristic Dynamic Programming (HDP): has both action generating and critic NNs with tunable parameters. 
+- Dual Heuristic Programming (DHP): additionaly to optimal value approximation, pedicts it's gradient via an NN
+- Q-Learning or Action Dependent HDP: uses Q function. 
 
