@@ -28,23 +28,54 @@ Result : all of implemented algorithms achieve poor performance, even with exten
 ### Algorithms
 
 #### Batch Algorithms
+
 - REINFORCE 
-fast and effective, but prone to converging to local optima
+It estimates the gradient of expected return:
+
+<img src="https://render.githubusercontent.com/render/math?math=\hat{\Delta_{\sigma\mu(\pi_{\sigma})}}=\frac{1}{NT}\sum_{i=1}^{N}\sum_{t=0}^{T}\delta_{\sigma}log \pi(a_{i}^{t}|s_{t}^{i},\theta)(R_{t}^{i}-b_{t}^{i})">, where 
+
+<img src="https://render.githubusercontent.com/render/math?math=R_{t}^{i}=\sum_{t^{\prime}=t}^{T}\gamma_{t-t^{\prime}}r_{t}^{i}"> and b is a policy baseline, that reduces varience. 
+__Result__ fast and effective, but prone to converging to local optima. 
+
 - Truncated Natural Policy Gradient (TNPG) 
-outperform other batch algorithms on most tasks
+It adds computation of the ascent direction : <img src="https://render.githubusercontent.com/render/math?math=I(\theta^-1)\Delta_{\sigma\mu(\pi_{\sigma})}"> . This provides a small change in a policy distribution.  The step is choosen as :
+<img src="https://render.githubusercontent.com/render/math?math=\alfa=\sqrt{\delta_{KL}(\Delta_{\sigma\mu(\pi_{\sigma})^T}  I(\theta)^{-1}\Delta_{\sigma\mu(\pi_{\sigma})^{-1}})}">
+Then authors  replace ∇θη(πθ) and I(θ) by their empirical estimates.
+
+__Result__ Outperforms other batch algorithms on most tasks. 
+
+
 - Reward-Weighted Regression (RWR)
-RWR showed fast initial improvement followed by significant slow-down. It can solve only basic tasks.
+RWR allows to avoid manual setting of learning rate. Each iteration algorithm optimizes a lower bound of the log-expected return
+<img src="https://render.githubusercontent.com/render/math?math=\theta=\argmax_{theta^{\prime}} \ell(\theta^{\prime})}">
+
+<img src="https://render.githubusercontent.com/render/math?math=\ell(\theta)=\frac{1}{NT}\sum_{i=1}^{N}\sum_{t=0}^{T}\delta_{\sigma}log \pi(a_{i}^{t}|s_{t}^{i},\theta)p(R_{t}^{i}-b_{t}^{i})">, where p is a function that transforms raw returns to nonnegative value. 
+
+__Result__ RWR showed fast initial improvement followed by significant slow-down. It can solve only basic tasks.
+
+
 - Relative Entropy Policy Search (REPS)
-REPS is prone to early convergence to local optima in case of continuous states and actions
+
+
+
+__Result__  REPS is prone to early convergence to local optima in case of continuous states and actions
+
+
 - Trust Region Policy Optimization (TRPO)
-outperform other batch algorithms on most tasks
+
+
+__Result__  Outperform other batch algorithms on most tasks along with TNPG.
+
+
 - Cross Entropy Method (CEM)
- the performance suffers from increasing complicity of system dynamics. In high-dimensional observation tasks it runs out of memory.
+ __Result__  CEM suffers from increasing complicity of system dynamics. Moreover, in high-dimensional observation tasks it runs out of memory.
+ 
+ 
 - Covariance Matrix Adaption Evolution Strategy (CMA-ES) 
 
 #### Online Algorithms
 _Deep Deterministic Policy Gradient (DDPG)_
-converges significantly faster on certain tasks due to its greater sample efficiency, but less stable, than batch algorithms. 
+__Result__  converges significantly faster on certain tasks due to its greater sample efficiency, but less stable, than batch algorithms. 
 However, he latter problem could be solved by rescaling the reward of all tasks by a factor of 0.1. 
 
 #### Recurrent Variants
