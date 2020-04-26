@@ -1,12 +1,12 @@
 theme: jekyll-theme-cayman
 title: CLCML
 description: On this web page you can find litreture review of topic related papers
-
+baseurl: 'CLCML/docs'
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
   Intro: "introduction"
-  Reviews: 
+
     
  
