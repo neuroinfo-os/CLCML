@@ -41,15 +41,13 @@ Result : all of implemented algorithms achieve poor performance, even with exten
 __Result__ fast and effective, but prone to converging to local optima. 
 
 - __Truncated Natural Policy Gradient (TNPG)__
-It adds computation of the ascent direction : 
+It adds computation of the ascent direction provides a small change in a policy distribution. 
 
 <p align="center">
  <img src="https://render.githubusercontent.com/render/math?math=I(\theta^-1)\Delta_{\sigma\mu(\pi_{\sigma})}"> .
  </p>
-  
- This provides a small change in a policy distribution. 
+   
  
- <p align="center">
   
  The step is choosen as :
 <img src="https://render.githubusercontent.com/render/math?math=\alpha=\sqrt{\delta_{KL}(\Delta_{\sigma\mu(\pi_{\sigma})^T}  I(\theta)^{-1}\Delta_{\sigma\mu(\pi_{\sigma})^{-1}})}">
