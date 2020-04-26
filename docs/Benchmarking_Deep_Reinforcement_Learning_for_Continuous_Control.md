@@ -14,16 +14,16 @@ Cart-Pole Balancing, Cart-Pole Swing Up, Mountain Car, Acrobot Swing Up, Double 
 Six tasks (such. as Swimmer, Walker), for which the main goal is to move forward as quickly as possible.
 
 #### Partially Observable Tasks
-- _Limited Sensors_:  only provide positional information is provided. An agent was to learn to infer velocity information in order to recover the full state. Similar tasks have been explored in Gomez & Miikkulainen (1998); Scha ̈fer & Udluft (2005); Heess et al. (2015a); Wierstra et al. (2007).
-- _Noisy Observations and Delayed Actions_: sensor noise is simulated through the addition of Gaussian noise to the observations. We also introduce a time delay between taking an action and the action being in effect.
-- _System Identification_: the underlying physical model parameters are varied across different episodes (Szita et al., 2003). The agents must learn to generalize across different models, as well as to infer the model parameters from its observation and action history.
+- _Limited Sensors_:  only positional information is provided. An agent is to learn to infer velocity information in order to recover the full state.
+- _Noisy Observations and Delayed Actions_: adding Gaussian noise to the observations.
+- _System Identification_: the underlying physical model parameters are varied across episodes, so agent has to generilize.
 
-Result :  recurrent policies can find better solutions than feedforward policies,  but they are more difficult to train.
+__Result__ :  recurrent policies can find better solutions than feedforward policies,  but they are more difficult to train.
 
 #### Hierarchical Tasks
 - Locomotion + Food Collection
 - Locomotion + Maze
-Result : all of implemented algorithms achieve poor performance, even with extensive hyperparameter search and 500 iterations of training.
+__Result__ : all of implemented algorithms achieve poor performance, even with extensive hyperparameter search and 500 iterations of training.
 
 ### Algorithms
 
@@ -69,7 +69,7 @@ __Result__ RWR showed fast initial improvement followed by significant slow-down
 
 
 - Relative Entropy Policy Search (REPS)
-
+At each iteration all trajectories are collected 
 
 
 __Result__  REPS is prone to early convergence to local optima in case of continuous states and actions
