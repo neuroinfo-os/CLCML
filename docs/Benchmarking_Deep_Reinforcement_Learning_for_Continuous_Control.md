@@ -68,28 +68,34 @@ RWR allows to avoid manual setting of learning rate. Each iteration algorithm op
 __Result__ RWR showed fast initial improvement followed by significant slow-down. It can solve only basic tasks.
 
 
-- Relative Entropy Policy Search (REPS)
-At each iteration all trajectories are collected 
+- __Relative Entropy Policy Search (REPS)__
+The aim is to lessen the loss of information per iteration. At each iteration all trajectories are collected and then argmin of dual parameters are found to maximize information for updated parameters.
 
 
 __Result__  REPS is prone to early convergence to local optima in case of continuous states and actions
 
 
-- Trust Region Policy Optimization (TRPO)
-
+- __Trust Region Policy Optimization (TRPO)__
+The algorithm is similar to TNPG, but adds _surrogate loss_ which leads to more precise control of the expected policy improvment. Detailed description of the algorithm could be found at [Schulman, J., Levine, S., Abbeel, P., Jordan, M. I., and Moritz, P. Trust region policy optimization. In ICML, pp. 1889–1897, 2015a].
 
 __Result__  Outperform other batch algorithms on most tasks along with TNPG.
 
 
-- Cross Entropy Method (CEM)
+- __Cross Entropy Method (CEM)__
+CEM explores directly in the policy parameter space, opposed to learning via stochastic actions. For that at each step i. N pertrubations of policy parameter are produced; ii new iteration performed; iii the top q-quantile parameters are used to compute the mean and a new covariance matrix. 
+
  __Result__  CEM suffers from increasing complicity of system dynamics. Moreover, in high-dimensional observation tasks it runs out of memory.
  
  
-- Covariance Matrix Adaption Evolution Strategy (CMA-ES) 
+- __Covariance Matrix Adaption Evolution Strategy (CMA-ES)__
+Similar to CEM, but estimates the covariance matrix using information about the corelations between consecutive updates.
 
 #### Online Algorithms
 _Deep Deterministic Policy Gradient (DDPG)_
+The algorithm improves the policy during environment exploration. For stability issues two target networks  are used: critic NN and the policy  NN. Authors applie gradient descent to the policy within  a minibatch from a replay pool; then The critic is trained via gradient descent on the l2 loss of the Bellman error. 
+
 __Result__  converges significantly faster on certain tasks due to its greater sample efficiency, but less stable, than batch algorithms. 
 However, he latter problem could be solved by rescaling the reward of all tasks by a factor of 0.1. 
 
 #### Recurrent Variants
+All aforementioned algorithms were implemented as recurrent policies. 
