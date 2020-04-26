@@ -29,28 +29,44 @@ Result : all of implemented algorithms achieve poor performance, even with exten
 
 #### Batch Algorithms
 
-- REINFORCE 
-It estimates the gradient of expected return:
+- __REINFORCE__ estimates the gradient of expected return:
+<p align="center">
+ <img src="https://render.githubusercontent.com/render/math?math=\hat{\Delta_{\sigma\mu(\pi_{\sigma})}}=\frac{1}{NT}\sum_{i=1}^{N}\sum_{t=0}^{T}\delta_{\sigma}log \pi(a_{i}^{t}|s_{t}^{i},\theta)(R_{t}^{i}-b_{t}^{i})">, where 
+ 
+ 
+ <img src="https://render.githubusercontent.com/render/math?math=R_{t}^{i}=\sum_{t^{\prime}=t}^{T}\gamma_{t-t^{\prime}}r_{t}^{i}"> 
+ and b is a policy baseline, that reduces varience. 
+</p>
 
-<img src="https://render.githubusercontent.com/render/math?math=\hat{\Delta_{\sigma\mu(\pi_{\sigma})}}=\frac{1}{NT}\sum_{i=1}^{N}\sum_{t=0}^{T}\delta_{\sigma}log \pi(a_{i}^{t}|s_{t}^{i},\theta)(R_{t}^{i}-b_{t}^{i})">, where 
-
-<img src="https://render.githubusercontent.com/render/math?math=R_{t}^{i}=\sum_{t^{\prime}=t}^{T}\gamma_{t-t^{\prime}}r_{t}^{i}"> and b is a policy baseline, that reduces varience. 
 __Result__ fast and effective, but prone to converging to local optima. 
 
-- Truncated Natural Policy Gradient (TNPG) 
-It adds computation of the ascent direction : <img src="https://render.githubusercontent.com/render/math?math=I(\theta^-1)\Delta_{\sigma\mu(\pi_{\sigma})}"> . This provides a small change in a policy distribution.  The step is choosen as :
-<img src="https://render.githubusercontent.com/render/math?math=\alfa=\sqrt{\delta_{KL}(\Delta_{\sigma\mu(\pi_{\sigma})^T}  I(\theta)^{-1}\Delta_{\sigma\mu(\pi_{\sigma})^{-1}})}">
+- __Truncated Natural Policy Gradient (TNPG)__
+It adds computation of the ascent direction : 
+
+<p align="center">
+ <img src="https://render.githubusercontent.com/render/math?math=I(\theta^-1)\Delta_{\sigma\mu(\pi_{\sigma})}"> .
+ </p>
+  
+ This provides a small change in a policy distribution. 
+ 
+ <p align="center">
+  
+ The step is choosen as :
+<img src="https://render.githubusercontent.com/render/math?math=\alpha=\sqrt{\delta_{KL}(\Delta_{\sigma\mu(\pi_{\sigma})^T}  I(\theta)^{-1}\Delta_{\sigma\mu(\pi_{\sigma})^{-1}})}">
 Then authors  replace ∇θη(πθ) and I(θ) by their empirical estimates.
 
 __Result__ Outperforms other batch algorithms on most tasks. 
 
 
-- Reward-Weighted Regression (RWR)
-RWR allows to avoid manual setting of learning rate. Each iteration algorithm optimizes a lower bound of the log-expected return
-<img src="https://render.githubusercontent.com/render/math?math=\theta=\argmax_{theta^{\prime}} \ell(\theta^{\prime})}">
+- __Reward-Weighted Regression (RWR)__
+RWR allows to avoid manual setting of learning rate. Each iteration algorithm optimizes a lower bound of the log-expected return with argmax of <img src="https://render.githubusercontent.com/render/math?math=\ell(\theta)">. Where
 
-<img src="https://render.githubusercontent.com/render/math?math=\ell(\theta)=\frac{1}{NT}\sum_{i=1}^{N}\sum_{t=0}^{T}\delta_{\sigma}log \pi(a_{i}^{t}|s_{t}^{i},\theta)p(R_{t}^{i}-b_{t}^{i})">, where p is a function that transforms raw returns to nonnegative value. 
-
+<p align="center">
+<img src="https://render.githubusercontent.com/render/math?math=\ell(\theta)=\frac{1}{NT}\sum_{i=1}^{N}\sum_{t=0}^{T}\delta_{\sigma}log \pi(a_{i}^{t}|s_{t}^{i},\theta)p(R_{t}^{i}-b_{t}^{i})">, 
+ 
+ where p is a function that transforms raw returns to nonnegative value. 
+</p>
+ 
 __Result__ RWR showed fast initial improvement followed by significant slow-down. It can solve only basic tasks.
 
 
