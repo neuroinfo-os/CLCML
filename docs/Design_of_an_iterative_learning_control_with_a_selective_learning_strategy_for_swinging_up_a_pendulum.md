@@ -22,10 +22,43 @@ with the following parameters to be controlled:
 
 
 
-### Controller sesign
+### Controller Desesign
 
 The linearizetion of system's differential equation at a general linearization point (<img src="https://render.githubusercontent.com/render/math?math=(y_S, \dot{y_S}, \ddot{y_S})">) results in the following :
 <img src="https://render.githubusercontent.com/render/math?math=\ddot{y}= -\alpha_0(y-y_s)-\alpha_1(\dot{y}-\dot{y_S})%2B\beta_2(\ddot{u}-\ddot{u_S})">
+
+<img src="https://render.githubusercontent.com/render/math?math=\alpha_0=-c_1*c_2(-\ddot{u_S}*\sin(y_S)%2Bg*cos(y_S))">
+
+
+<img src="https://render.githubusercontent.com/render/math?math=\alpha_1=c_1*c_2">
+
+
+<img src="https://render.githubusercontent.com/render/math?math=\beta_2=c_1*c_2*cos(y_S)">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
