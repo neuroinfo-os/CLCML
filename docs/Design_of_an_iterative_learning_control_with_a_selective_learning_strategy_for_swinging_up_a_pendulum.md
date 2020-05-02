@@ -3,7 +3,9 @@
 ## 2018 European Control Conference, June 12-15, 2018.
 
 ### Short summary
-Authors present an Iterative Learning Control (ILC) algorithm for trajectory tracking in a nonlinear system. The algorithm is tested on a pendulum on a cart task (classic task in control in engineering). The novelity in the controller design is that (1) it is restricted to learn only on trajectory segments with small tracking errors; and (2) the system's parameters set in a way that gives an opportunity to overcome singularities in plant inversion. 
+Authors present an Iterative Learning Control (ILC) algorithm for trajectory tracking in a nonlinear system. The algorithm is tested on a pendulum on a cart task (classic task in control in engineering). As there is a huge lag between the measurments,  authors propose that feedforward control could be benefitial for the task, although it is commonly solved with feedback approaches. 
+
+The novelity in the controller design is that (1) it is restricted to learn only on trajectory segments with small tracking errors; and (2) the system's parameters set in a way that gives an opportunity to overcome singularities in plant inversion. 
 
 ___Result:___ It was shown, that described ILC algorithm can learned to swing up a pendulum in less, than six iterations. However, the learning process stops if the cart reaches the end of the rail.
 
