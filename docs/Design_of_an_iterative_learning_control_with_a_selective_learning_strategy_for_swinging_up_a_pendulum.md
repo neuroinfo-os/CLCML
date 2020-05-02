@@ -18,6 +18,8 @@ The pendulum is described with the following second-order differential equation:
 <img src="https://render.githubusercontent.com/render/math?math=c_{2}=m*a">
 
 with the following parameters to be controlled:
+
+
 <img src="https://github.com/neuroinfo-os/CLCML/blob/master/docs/images/pendulum_param.png" height="200px" width="350px" >
 
 
@@ -36,6 +38,21 @@ The linearizetion of system's differential equation at a general linearization p
 <img src="https://render.githubusercontent.com/render/math?math=\beta_2=c_1*c_2*cos(y_S)">
 
 
+
+For learning purposes the system dynamics is discretized at a finite number of time points (k=n). After every trial _j_  parametrs are updated based on the measured input (_u[k]_) and output _y[k]_. The tracking error is used to calculate the next input _u[k+1]_, which is fed into the system.  Here the L-filter to calculate the next input inverts the dynamics.
+The general update law has a form:
+
+<img src="https://render.githubusercontent.com/render/math?math=u_{j+1}[k]=Q(q{-1}(u_j[k] %2B L(q{-1})*e_j[k]))">, where <img src="https://render.githubusercontent.com/render/math?math=Q(q{-1},  L(q{-1})"> are discrete-time filters, and <img src="https://render.githubusercontent.com/render/math?math=q{-1}"> is the back-shift operator. 
+
+
+
+
+
+__Tere are two main novelties in the algorithm.__ _First,_ __the learning process was restricted to samples with small tracking error by adjusting the L-filter;__ this  garantees that linearization coold approximate the system dynamics. At each trial the smallest index _k_ calculated in a way that absolute tracking value <img src="https://render.githubusercontent.com/render/math?math=|e_j[k]|"> exceeds a threshold <img src="https://render.githubusercontent.com/render/math?math=e_{max}>0">. The input is updated only for these time steps. In other cases cart position is set to decline to zero. 
+
+_Second,_ __the coefficients of the learning law are set in a way, that prevents learning from segments, where change of one variable almost does not influence the other.__  In particular this happens, when the rod is in a horizontal position: card's velocity cannot produce a significant change in the rod's angle. 
+
+_Finally,_ authors add  Q-filter into the learning law to filter out unmodelled high frequencies. 
 
 
 
