@@ -3,11 +3,10 @@
 ## 2018 European Control Conference, June 12-15, 2018.
 
 ### Short summary
-Authors present an Iterative Learning Control (ILC) algorithm for trajectory tracking in a nonlinear system on a swinging up a pendulum on a cart task.
-It was shown, that described ILC algorithm can learned to swing up a pendulum by angle trajectory tracking in six iterations. 
-The novelity in the controller design is that it learns on trajectory segments with small tracking errors.
+Authors present an Iterative Learning Control (ILC) algorithm for trajectory tracking in a nonlinear system. It was shown, that described ILC algorithm can learned to swing up a pendulum on a cart (classic task in control in engineering) in six iterations. The novelity in the controller design is that (1) it is restricted to learn only on trajectory segments with small tracking errors; and (2) the system's parameters set in a way that gives an opportunity to overcome singularities in plant inversion. 
 
 ### Task
+A pendulum rod is placed on a cart pole, which moves along horisontal direction. The moving of a cart influences the angle of the rod. The aim of the task is to make the cart learn how to move in order to swing the rod from downwards to upwards position. 
 The pendulum is described with the following second-order differential equation:
 
 
@@ -48,7 +47,7 @@ The general update law has a form:
 
 
 
-__Tere are two main novelties in the algorithm.__ _First,_ __the learning process was restricted to samples with small tracking error by adjusting the L-filter;__ this  garantees that linearization coold approximate the system dynamics. At each trial the smallest index _k_ calculated in a way that absolute tracking value <img src="https://render.githubusercontent.com/render/math?math=|e_j[k]|"> exceeds a threshold <img src="https://render.githubusercontent.com/render/math?math=e_{max}>0">. The input is updated only for these time steps. In other cases cart position is set to decline to zero. 
+__There are two main novelties in the algorithm.__ _First,_ __the learning process was restricted to samples with small tracking error by adjusting the L-filter;__ this  garantees that linearization coold approximate the system dynamics. At each trial the smallest index _k_ calculated in a way that absolute tracking value <img src="https://render.githubusercontent.com/render/math?math=|e_j[k]|"> exceeds a threshold <img src="https://render.githubusercontent.com/render/math?math=e_{max}>0">. The input is updated only for these time steps. In other cases cart position is set to decline to zero. 
 
 _Second,_ __the coefficients of the learning law are set in a way, that prevents learning from segments, where change of one variable almost does not influence the other.__  In particular this happens, when the rod is in a horizontal position: card's velocity cannot produce a significant change in the rod's angle. 
 
