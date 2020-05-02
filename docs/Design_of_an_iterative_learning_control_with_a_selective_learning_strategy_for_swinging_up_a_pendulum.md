@@ -13,7 +13,7 @@ The pendulum is described with the following second-order differential equation:
 
  <img src="https://render.githubusercontent.com/render/math?math=\ddot{y}=c_1(c_2(\ddot{u}*cos(y)%2B g*sin(y))-c*\dot{y})">
 
-<img src="https://render.githubusercontent.com/render/math?math=c_{1}=\frac{1}{J_{s}%2Bm*a{2}}">
+<img src="https://render.githubusercontent.com/render/math?math=c_{1}=\frac{1}{J_{s}%2Bm*a^{2}}">
 
 <img src="https://render.githubusercontent.com/render/math?math=c_{2}=m*a">
 
@@ -42,7 +42,7 @@ The linearizetion of system's differential equation at a general linearization p
 For learning purposes the system dynamics is discretized at a finite number of time points (k=n). After every trial _j_  parametrs are updated based on the measured input (_u[k]_) and output _y[k]_. The tracking error is used to calculate the next input _u[k+1]_, which is fed into the system.  Here the L-filter to calculate the next input inverts the dynamics.
 The general update law has a form:
 
-<img src="https://render.githubusercontent.com/render/math?math=u_{j+1}[k]=Q(q{-1}(u_j[k] %2B L(q{-1})*e_j[k]))">, where <img src="https://render.githubusercontent.com/render/math?math=Q(q{-1},  L(q{-1})"> are discrete-time filters, and <img src="https://render.githubusercontent.com/render/math?math=q{-1}"> is the back-shift operator. 
+<img src="https://render.githubusercontent.com/render/math?math=u_{j+1}[k]=Q(q^{-1}(u_j[k] %2B L(q^{-1})*e_j[k]))">, where <img src="https://render.githubusercontent.com/render/math?math=Q(q^{-1}) and L(q^{-1})"> are discrete-time filters, and <img src="https://render.githubusercontent.com/render/math?math=q^{-1}"> is the back-shift operator. 
 
 
 
