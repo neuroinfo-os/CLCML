@@ -1,5 +1,8 @@
 theme: minima
 title: HOME
+author:
+  name: GitHub User
+  email: your-email@domain.com
 #subtitle: 
 #description: On this web page you can find literature review of topic related papers
 #baseurl: 'CLCML/docs'
