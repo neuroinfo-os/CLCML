@@ -1,8 +1,0 @@
----
-Layout: Home
-
----
-
-QWERTY
-
-[back](./)
