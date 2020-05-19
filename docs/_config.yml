@@ -1,14 +1,15 @@
 theme: minima
-title: HOME
-author:
-  name: GitHub User
-  email: your-email@domain.com
+title: CLCML
+author: neiroinfo-os
+
 #subtitle: 
 #description: On this web page you can find literature review of topic related papers
 #baseurl: 'CLCML/docs'
 
 # --- List of links in the navigation bar --- #
-
+social_links:
+    github:  jekyll
+    
 header_pages:
   -  introduction.md
   -  literature_review.md
