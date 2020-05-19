@@ -1,5 +1,7 @@
 ---
 Layout: post
+Title: Control theory
+
 
 ---
 
