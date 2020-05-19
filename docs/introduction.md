@@ -1,6 +1,6 @@
 ---
 layout: Introduction
-#title: Introduction
+title: Introduction
 
 ---
 
