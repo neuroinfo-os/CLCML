@@ -1,6 +1,6 @@
 ---
-Layout: Default
-title: glossary
+Layout: page
+title: Glossary
 
 
 ---
