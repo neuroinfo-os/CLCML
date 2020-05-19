@@ -1,0 +1,1 @@
+A system whose present state depends on the past.

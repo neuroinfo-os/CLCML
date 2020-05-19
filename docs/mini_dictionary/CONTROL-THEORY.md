@@ -1,0 +1,1 @@
+Theory about the behavior of dynamical systems dependent on inputs. 
