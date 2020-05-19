@@ -1,14 +1,14 @@
 theme: minima
 title: HOME
-subtitle: 
-description: On this web page you can find literature review of topic related papers
+#subtitle: 
+#description: On this web page you can find literature review of topic related papers
 #baseurl: 'CLCML/docs'
 
 # --- List of links in the navigation bar --- #
 
 header_pages:
   -  introduction.md
-  -  Literature_Review.md
+  -  literature_review.md
   -  useful_sources.md
 
  
