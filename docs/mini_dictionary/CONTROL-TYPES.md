@@ -14,4 +14,4 @@ Layout: post
 
 
 
-[back](./glossary.md)
+[back](docs/glossary.md)
