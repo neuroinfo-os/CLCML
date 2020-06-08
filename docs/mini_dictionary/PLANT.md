@@ -11,4 +11,4 @@ A.k.a. system:  set of components interacting with each other and with an enviro
 
 
 
-[back](./glossary.md)
+[back](/docs/glossary.md)
