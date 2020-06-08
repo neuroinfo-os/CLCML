@@ -9,7 +9,7 @@ The aim of the work is to explore how the first and second statistical moments o
 2.
    * Identification of moments' subsets which can steer the whole system in a desired state;
    * Identification of original nodes corresponding to described moments' subsets;
-3. Feedback controller design.
+3. Feedback controller design. 
 
 
 
