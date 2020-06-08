@@ -21,4 +21,4 @@ Constants act as filters and their choice depends on a set goal. The proportiona
 
 
 
-[back](./glossary.md)
+[back](/docs/glossary.md)
