@@ -13,4 +13,4 @@ THE SYSTEM IS STABLE IF:
 
 
 
-[back](./glossary.md)
+[back](/docs/glossary.md)
