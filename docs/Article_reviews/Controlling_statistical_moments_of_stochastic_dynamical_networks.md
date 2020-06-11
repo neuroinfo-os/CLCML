@@ -62,7 +62,7 @@ Taking pinning into account yields:
 <img src="https://render.githubusercontent.com/render/math?math=\dot{C_JJ}=\nabla_J f_JC_JJ %2B C_JJ\nabla_J f^T_J  %2B Q_JJ %2B \nabla_K f_JC_KJ %2B C_KJ \nabla_K F^T_J)"> 
 
 
-NOTE! The descibed control system depends on a state vector <img src="https://render.githubusercontent.com/render/math?math=x_J(t)"> evaluated at  <img src="https://render.githubusercontent.com/render/math?math=x-\mu">. This implies full observability of the system!  
+__NOTE!__ The descibed control system depends on a state vector <img src="https://render.githubusercontent.com/render/math?math=x_J(t)"> evaluated at  <img src="https://render.githubusercontent.com/render/math?math=x-\mu">. This implies full observability of the system!  
 
 
 
