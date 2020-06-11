@@ -25,9 +25,15 @@ where  <img src="https://render.githubusercontent.com/render/math?math=\nabla f(
 
 
 ### Step 2
-A subset K of the vertex set I := {1,...,N} for the system is a set of switching nodes, if the network is guaranteed to converge to a solution with SN are forced to attain the values of one of the solution when t tends to infinity. For that the following requirements should be sutisfied:
+ A subset K of the vertex set I := {1,...,N} for the system is a set of __switching nodes__(SN), if the network is guaranteed to converge to a solution with SN are forced to attain the values of one of the solution when t tends to infinity. For that the following requirements should be sutisfied:
 1. __Assumption 1__  For all initial conditions state of the system stays within a ball of finite radius as time tends to infinity.
 2. __Assumption 2__ the Jacobian matrix of f(t, x_i, x_I) is strictly negative definite.
+If assumtions fullfilled that the set of SNs is identical to the __feedback vertex set (FVS)__ of the graph of the system. 
+
+The set of SNs (<img src="https://render.githubusercontent.com/render/math?math=K^*">) consists of the means and variances of the nodes in K and  the covariances between these nodes and all others:
+
+<img src="https://render.githubusercontent.com/render/math?math=K^*=\{\mu_i, C_{i,j}, C_{j,i}: j\in K, i\in I\}">
+
 
 ### Step 3
 
