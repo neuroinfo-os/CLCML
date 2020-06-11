@@ -1,6 +1,6 @@
 # Controlling statistical moments of stochastic dynamical networks
 ## PHYSICAL REVIEW E 94, 012306 (2016)
-## Dmytro Bielievtsov, Josef Ladenbauer, and Klaus Obermayer
+### Dmytro Bielievtsov, Josef Ladenbauer, and Klaus Obermayer
 ### _DOI: 10.1103/PhysRevE.94.012306_
 
 
