@@ -1,7 +1,10 @@
 ---
-title: worse to check
+title: Useful resources
 ---
 
+
+|a|b|
+|---|---|
 
 
 __Collection of videos by Brian Douglas covering the fundamentals of classical control theory__ [link](https://www.youtube.com/playlist?list=PLUMWjy5jgHK3j74Z5Tq6Tso1fSfVWZC8L)
