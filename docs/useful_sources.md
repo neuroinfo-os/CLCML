@@ -1,7 +1,7 @@
 ---
 title: Useful resources
 
-<table class="tg">
+<!--<table class="tg">
   <tr>
     <th class="tg-baqh" colspan="2">Some values</th>
   </tr>
@@ -36,7 +36,7 @@ title: Useful resources
 </table>
 
 ---
-
+-->
 
 |a|b|
 |-------------|-----------|
