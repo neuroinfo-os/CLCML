@@ -1,7 +1,3 @@
----
-title: Useful sources
-
----
 
 Description|link|
 |---|---|
