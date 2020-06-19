@@ -36,4 +36,6 @@ Cambridge University press, 2019. DOI: 10.1017/9781108380690_
 The main scope of the book is stated in a precise manner by the authors: "This book is about the growing intersection of data-driven methods, applied optimization, and the classical fields of engineering mathematics and mathematical physics."
 Pay attention to Part II, chapter 6: Neural Networks and Deep Learning; and Part III Dynamics and Control. Additionaly, on the first pages (13p in my version) you can appreciate list of most common Optimization Techniques, Equations, Symbols, and Acronyms in ingineering, which is handy for averyone new to the field and struggling with some advanced papers.
 
+__Machine Learning Control –Taming Nonlinear Dynamics and Turbulence__ , Springer, 2016
 
+[link](https://faculty.washington.edu/sbrunton/mlcbook/CH00_FRONT.pdf)
