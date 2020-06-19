@@ -3,7 +3,7 @@ title: Useful sources
 
 ---
 
-|Description|link|
+Description|link|
 |---|---|
 |__Collection of videos by Brian Douglas covering the fundamentals of classical control theory:__|[link](https://www.youtube.com/playlist?list=PLUMWjy5jgHK3j74Z5Tq6Tso1fSfVWZC8L)|
 __If you need to refresh your knowledge of differential equations:__|[link](https://www.khanacademy.org/math/differential-equations#second-order-differential-equations)|
