@@ -5,7 +5,7 @@ Layout: post
 
 
 
-A system whose present state depends on the past.
+A system which present state depends on the past.
 
 
 
