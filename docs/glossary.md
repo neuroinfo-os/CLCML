@@ -16,4 +16,4 @@ title: Glossary
 [Signal](./mini_dictionary/SIGNAL.md)
 [Stable system](./mini_dictionary/Stable-system.md)
 
-[back](./glossary.md)
+[back](./)
