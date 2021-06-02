@@ -38,7 +38,7 @@ The aricle provides an historical overview of development of NN usage in feedbac
 
 
 In adaptive control there are two main Neural Network Control Topologies: direct and inderect. __Indirect__ control aims to learn dynamics of the unknown plant (dynamical system) via *identifier block* first; then it uses aquired information to control the plant via *controller block*. __Direct control__ directly tunes the parameters of an adjustable NN controller. 
-<img src="/docs/images/dir_indir_control.png" height="350px" width="500px" align="middle" /> solid lines denote signal flow, dashed line - tuning. </p>
+<img src="../images/dir_indir_control.png" height="350px" width="500px" align="middle" /> solid lines denote signal flow, dashed line - tuning. 
  
 The challenge in using NN for __feedback control__ is to select a adequate control system structure, and then to tune the NN weights to guarantee closed-loop stability and performance.
 
