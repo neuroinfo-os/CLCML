@@ -1,4 +1,10 @@
-__Controlling statistical moments of stochastic dynamical networks__
+
+---
+layout: page
+---
+
+
+###__Controlling statistical moments of stochastic dynamical networks__
 _Dmytro Bielievtsov, Josef Ladenbauer, and Klaus Obermayer_
 _DOI: 10.1103/PhysRevE.94.012306_
 
