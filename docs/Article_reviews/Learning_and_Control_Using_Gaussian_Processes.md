@@ -1,6 +1,5 @@
-
-ACM/IEEE 9th International Conference on Cyber-Physical Systems (ICCPS), 2018
-Achin Jain,Truong Nghiem, Manfred Morari and Rahul Mangharam
+### __Learning and Control Using Gaussian Processes__
+_Achin Jain, Truong Nghiem, Manfred Morari, and Rahul Mangharam_
 
 
 ### Summary 
