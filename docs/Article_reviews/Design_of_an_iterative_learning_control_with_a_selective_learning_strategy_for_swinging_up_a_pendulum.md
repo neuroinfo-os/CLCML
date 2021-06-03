@@ -1,4 +1,4 @@
-# Design of an iterative learning control with a selective learning strategy for swinging up a pendulum
+## Design of an iterative learning control with a selective learning strategy for swinging up a pendulum
 ## Jonas Beuchert, Joerg Raisch, and Thomas Seel
 ## 2018 European Control Conference, June 12-15, 2018.
 
@@ -23,9 +23,7 @@ The pendulum is described with the following second-order differential equation:
 with the following parameters to be controlled:
 
 
-<img src="https://github.com/neuroinfo-os/CLCML/blob/master/docs/images/pendulum_param.png" height="200px" width="350px" >
-
-
+<img src="../images/pendulum_param.png" height="200px" width="350px" >
 
 ### Controller Desesign
 
@@ -55,12 +53,12 @@ __There are two main novelties in the algorithm.__ _First,_ __the learning proce
 
 Thus,  the update law looks like 
 
-<img src="https://github.com/neuroinfo-os/CLCML/blob/master/docs/images/pendulum_update.png" height="200px" width="350px" >
+<img src="../images/pendulum_update.png" height="200px" width="350px" >
 
 _Second,_ __the coefficients of the learning law are set in a way, that prevents learning from segments, where change of one variable almost does not influence the other.__  In particular this happens, when the rod is in a horizontal position: card's velocity cannot produce a significant change in the rod's angle. 
 
 
-<img src="https://github.com/neuroinfo-os/CLCML/blob/master/docs/images/pendulum_param2.png" height="200px" width="350px" >
+<img src="../images/pendulum_param2.png" height="200px" width="350px" >
 
 
 where, _v, d, p_ are positive constants. Parameter _d_ influences where to attenuate coefficients. Other determine slope and shape of the transitions between the restricted and the unmodified segments. 
