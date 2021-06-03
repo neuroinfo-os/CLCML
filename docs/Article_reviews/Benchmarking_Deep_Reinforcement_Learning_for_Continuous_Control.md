@@ -1,11 +1,10 @@
 ---
 layout: page
-title: About
 ---
 
 
-## Benchmarking Deep Reinforcement Learning for Continuous Control
-### Authors: Yan Duan, Xi Chen, Rein Houthooft, John Schulman, Pieter Abbeel
+__Benchmarking Deep Reinforcement Learning for Continuous Control__ \
+_Yan Duan, Xi Chen, Rein Houthooft, John Schulman, Pieter Abbeel_
 
 ------------------------
 The article is dedicated to implementation and comparison of a range of reinforcement learning algorithms. Benchmarks and algorithms gould be found at
