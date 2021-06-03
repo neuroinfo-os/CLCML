@@ -1,4 +1,3 @@
-### __Learning and Control Using Gaussian Processes__
 _Achin Jain, Truong Nghiem, Manfred Morari, and Rahul Mangharam_
 
 
