@@ -3,7 +3,7 @@ layout: page
 ---
 
 
-__Benchmarking Deep Reinforcement Learning for Continuous Control__ \
+###__Benchmarking Deep Reinforcement Learning for Continuous Control__ \
 _Yan Duan, Xi Chen, Rein Houthooft, John Schulman, Pieter Abbeel_
 
 ------------------------
