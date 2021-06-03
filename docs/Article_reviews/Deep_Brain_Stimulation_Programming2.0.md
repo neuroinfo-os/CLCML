@@ -4,7 +4,7 @@ layout: page
 ---
 
 
-###__Deep Brain Stimulation Programming 2.0:__\
+### __Deep Brain Stimulation Programming 2.0:__\
 __Future Perspectives for Target Identification and Adaptive Closed Loop Stimulation__\
 _Franz Hell, Carla Palleis, Jan H. Mehrkens, Thomas Koeglsperger, and Kai Bötzel_ \
 Doi: 10.3389/fneur.2019.00314
